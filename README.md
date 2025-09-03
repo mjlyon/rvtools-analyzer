@@ -54,7 +54,8 @@ Test with a sample file (if you have one)
 ----------------------------
 ### Use systemd
 # Create service file
-```sudo tee /etc/systemd/system/rvtools-analyzer.service << 'EOF'
+```
+sudo tee /etc/systemd/system/rvtools-analyzer.service << 'EOF'
 [Unit]
 Description=RVTools Analyzer
 After=network.target
