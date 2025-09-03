@@ -72,7 +72,7 @@ Environment=PORT=3000
 
 [Install]
 WantedBy=multi-user.target
-EOF```
+EOF
 
 # Enable and start the service
 sudo systemctl daemon-reload
