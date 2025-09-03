@@ -1,4 +1,3 @@
-cat > package.json << 'EOF'
 {
   "name": "rvtools-analyzer",
   "version": "1.0.0",
@@ -20,4 +19,4 @@ cat > package.json << 'EOF'
     "node": ">=14.0.0"
   }
 }
-EOF
+
