@@ -34,6 +34,25 @@ Test with a sample file (if you have one)
 ```node rvtools-analyzer.js /path/to/your/rvtools-file.xlsx```
 ```npm start```
 
+## Step 5 - Deploy Webserver
+### Install PM2 globally
+```sudo npm install -g pm2```
+
+### Start the application
+```pm2 start rvtools-analyzer.js --name "rvtools-analyzer"```
+
+### Save PM2 configuration
+```pm2 save```
+
+### Setup PM2 to start on boot
+```pm2 startup```
+
+### Check status
+```pm2 status```
+```pm2 logs rvtools-analyzer```
+
+----------------------------
+### Use systemd
 
 
    
