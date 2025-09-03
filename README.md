@@ -10,29 +10,29 @@ RV Tools Analyzer is designed to take RVTools via upload and provide some analys
 ```sudo apt-get install -y nodejs```
 
 ### For CentOS/RHEL/Fedora
-curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
-sudo dnf install -y nodejs npm
+```curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -```
+```sudo dnf install -y nodejs npm```
 
 ### Verify installation
-node --version
-npm --version
+```node --version```
+```npm --version```
 
 ## Step 2 - Create App Directory
 
-sudo mkdir -p /opt/rvtools-analyzer
-cd /opt/rvtools-analyzer
+```sudo mkdir -p /opt/rvtools-analyzer```
+```cd /opt/rvtools-analyzer```
 
 ### Set ownership (replace 'username' with your user)
-sudo chown -R $USER:$USER /opt/rvtools-analyzer
+```sudo chown -R $USER:$USER /opt/rvtools-analyzer```
 
 ## Step 3 - Install Dependencies
-   npm install
+   ```npm install```
 
 ## Step 4 - Test the Installation
 **Test with a sample file (if you have one)
-node rvtools-analyzer.js /path/to/your/rvtools-file.xlsx
+```node rvtools-analyzer.js /path/to/your/rvtools-file.xlsx```
+```npm start```
 
-# Or start the web server
-npm start
+
 
    
