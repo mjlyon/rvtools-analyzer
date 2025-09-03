@@ -53,6 +53,32 @@ Test with a sample file (if you have one)
 
 ----------------------------
 ### Use systemd
+# Create service file
+```sudo tee /etc/systemd/system/rvtools-analyzer.service << 'EOF'
+[Unit]
+Description=RVTools Analyzer
+After=network.target
 
+[Service]
+Type=simple
+User=your-username
+WorkingDirectory=/opt/rvtools-analyzer
+ExecStart=/usr/bin/node rvtools-analyzer.js
+Restart=on-failure
+RestartSec=5
+Environment=NODE_ENV=production
+Environment=PORT=3000
+
+[Install]
+WantedBy=multi-user.target
+EOF```
+
+# Enable and start the service
+sudo systemctl daemon-reload
+sudo systemctl enable rvtools-analyzer
+sudo systemctl start rvtools-analyzer
+
+# Check status
+sudo systemctl status rvtools-analyzer
 
    
