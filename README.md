@@ -22,5 +22,10 @@ npm --version
 sudo mkdir -p /opt/rvtools-analyzer
 cd /opt/rvtools-analyzer
 
-## Set ownership (replace 'username' with your user)
+### Set ownership (replace 'username' with your user)
 sudo chown -R $USER:$USER /opt/rvtools-analyzer
+
+## Install Dependencies
+   npm install
+
+   
