@@ -25,7 +25,14 @@ cd /opt/rvtools-analyzer
 ### Set ownership (replace 'username' with your user)
 sudo chown -R $USER:$USER /opt/rvtools-analyzer
 
-## Install Dependencies
+## Step 3 - Install Dependencies
    npm install
+
+## Step 4 - Test the Installation
+**Test with a sample file (if you have one)
+node rvtools-analyzer.js /path/to/your/rvtools-file.xlsx
+
+# Or start the web server
+npm start
 
    
