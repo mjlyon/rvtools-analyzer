@@ -83,10 +83,10 @@ sudo systemctl status rvtools-analyzer
 
 ```
 ## Step 6 - Configure Firewall Rules
-### For Ubuntu/Debian (ufw)
+   ### For Ubuntu/Debian (ufw)
 ```sudo ufw allow 3000/tcp```
 ```sudo ufw reload```
 
-### For CentOS/RHEL (firewalld)
+   ### For CentOS/RHEL (firewalld)
 ```sudo firewall-cmd --permanent --add-port=3000/tcp```
 ```sudo firewall-cmd --reload```
