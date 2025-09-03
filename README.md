@@ -91,3 +91,41 @@ sudo systemctl status rvtools-analyzer
    ### For CentOS/RHEL (firewalld)
 ```sudo firewall-cmd --permanent --add-port=3000/tcp```
 ```sudo firewall-cmd --reload```
+
+## Step 7 - Configure NGINX
+
+## Install Nginx
+```sudo apt update```
+```sudo apt install nginx -y```  # Ubuntu/Debian
+
+### OR
+```sudo dnf install nginx -y```   # CentOS/RHEL/Fedora
+
+# Create Nginx configuration
+sudo tee /etc/nginx/sites-available/rvtools-analyzer << 'EOF'
+server {
+    listen 80;
+    server_name your-server-ip-or-domain;
+
+    client_max_body_size 100M;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+        proxy_read_timeout 300s;
+        proxy_connect_timeout 75s;
+    }
+}
+EOF
+
+# Enable the site
+sudo ln -s /etc/nginx/sites-available/rvtools-analyzer /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
