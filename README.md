@@ -1,5 +1,7 @@
-# rvtools-analyzer
+# RVtools-analyzer
 RV Tools Analyzer is designed to take RVTools via upload and provide some analysis of utilization
+- Designed for portability
+- Designed for local path or upload
 
 
 ## Step 1 - Install Node
