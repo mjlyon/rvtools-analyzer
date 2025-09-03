@@ -94,14 +94,15 @@ sudo systemctl status rvtools-analyzer
 
 ## Step 7 - Configure NGINX
 
-## Install Nginx
+## Install Nginx Ubuntu/Debian
 ```sudo apt update```
-```sudo apt install nginx -y```  # Ubuntu/Debian
+```sudo apt install nginx -y```  
 
-### OR
-```sudo dnf install nginx -y```   # CentOS/RHEL/Fedora
+### Install Nginx CentOS/RHEL/Fedora
+```sudo dnf install nginx -y```    
 
-# Create Nginx configuration
+## Create Nginx configuration
+```
 sudo tee /etc/nginx/sites-available/rvtools-analyzer << 'EOF'
 server {
     listen 80;
@@ -124,8 +125,10 @@ server {
     }
 }
 EOF
-
-# Enable the site
+```
+## Enable the site
+```
 sudo ln -s /etc/nginx/sites-available/rvtools-analyzer /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
+```
