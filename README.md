@@ -6,8 +6,8 @@ RV Tools Analyzer is designed to take RVTools via upload and provide some analys
 
 ## Step 1 - Install Node
 ### For Ubuntu/Debian
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt-get install -y nodejs
+```curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -```
+```sudo apt-get install -y nodejs```
 
 ### For CentOS/RHEL/Fedora
 curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
