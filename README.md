@@ -29,7 +29,7 @@ RV Tools Analyzer is designed to take RVTools via upload and provide some analys
    ```npm install```
 
 ## Step 4 - Test the Installation
-**Test with a sample file (if you have one)
+Test with a sample file (if you have one)
 ```node rvtools-analyzer.js /path/to/your/rvtools-file.xlsx```
 ```npm start```
 
