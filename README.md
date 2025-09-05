@@ -132,3 +132,10 @@ sudo ln -s /etc/nginx/sites-available/rvtools-analyzer /etc/nginx/sites-enabled/
 sudo nginx -t
 sudo systemctl reload nginx
 ```
+
+## View the User Interface
+
+Open your browser and go to: ```http://your-server-ip``` (with Nginx) or ```http://your-server-ip:3000``` (direct)
+### Upload your RVTools Excel files using the drag-and-drop interface
+### Click "Analyze Files" for single file analysis or "Compare Files" for multiple files
+### View the results with metrics and visualizations
