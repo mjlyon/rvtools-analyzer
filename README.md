@@ -137,6 +137,7 @@ sudo systemctl reload nginx
 
 Open your browser and go to: ```http://your-server-ip``` (with Nginx) or ```http://your-server-ip:3000``` (direct)
 ### Upload your RVTools Excel files using the drag-and-drop interface
+![Example Image](UIexample.png)
 
 
 ### Click "Analyze Files" for single file analysis or "Compare Files" for multiple files
