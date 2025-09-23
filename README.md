@@ -143,3 +143,5 @@ Open your browser and go to: ```http://your-server-ip``` (with Nginx) or ```http
 ### Click "Analyze Files" for single file analysis or "Compare Files" for multiple files
 ### View the results with metrics and visualizations
 ![Upload Image](UIexample2.png)
+
+### MIT License 
