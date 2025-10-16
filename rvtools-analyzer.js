@@ -1,3 +1,7 @@
+// RV Tools analyzer
+// Ideally desinged to upload, and compare RVtools exports
+// Designed to run as a web-app
+
 const fs = require('fs');
 const path = require('path');
 const XLSX = require('xlsx');
